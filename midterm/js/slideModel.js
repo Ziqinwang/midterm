@@ -98,8 +98,7 @@ var showMap = function(){
       ).addTo(mymap);
      });
   } else if (count === 2){
-    mymap.flyTo([41.889376, -87.630527], 16, {
-      'duration':1.5 }
+    mymap.flyTo([41.889376, -87.630527], 16, {'duration':1.5 }
     );
     $.ajax(philly).done(function(data){
       var parsedData = JSON.parse(data);
@@ -112,7 +111,7 @@ var showMap = function(){
       ).addTo(mymap);
      });
     } else if (count == 3){
-      mymap.flyTo([41.875994, -87.618916], 11, {'duration':1.5 });
+      mymap.flyTo([41.879396, -87.640995], 16, {'duration':1.5 });
       $.ajax(philly).done(function(data){
         //console.log(data);
           var parsedData = JSON.parse(data);
@@ -125,6 +124,7 @@ var showMap = function(){
           }).addTo(mymap);
       });
     } else if (count === 4){
+      mymap.setView([41.889376, -87.630527], 11);
       $.ajax(philly).done(function(data){
           $("#range").show();
           var parsedData = JSON.parse(data);
