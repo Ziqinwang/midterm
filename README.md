@@ -1,39 +1,16 @@
-# Midterm: Story Map
+# mid
+1.the firsr slice would be the map of the xxxx and some basic paragraphy, so make sure it is nicely donw that people would like to click the next
 
-## Project Outline
+2.the second slice would be zoom in to certain area and show the garden/restaurant of the area and you can click to see the pop up
 
-The midterm is due on March 6. For your midterm project, you will create a story map application for a dataset
-of your choosing. A story map tells a story through several slides, each slide
-combining text and data. The user is able to move forward and backwards through
-the slides by clicking on next and previous buttons.
+3.the third slice would be change to anthoer angel agian and show the filter funciton on the side so everyone can interactive aroud
 
-## Requirements
+4.the forth slice would be click everything that can zoom in// or use the plugin of leafleat to show the geography/visual map so everyone   can play aronund.
 
-- Your story map should have at least five slides
-- Your story map should have next and previous buttons
-- On the first slide of your story map, the previous button should be hidden
-- On the last slide of your story map, the next button should be hidden
-- The application should be structured in a way where clicking on the next and
-previous buttons will replace the data on the map and the text in the sidebar
-with the next or previous content (in other words, you are not building five
-different maps with different text and data—you are building one map in which
-the content changes based on user input)
-- At least one slide should change the zoom level or center of the map; see
-fitBounds, setView, setZoom, and [related functions](http://leafletjs.com/reference.html#map-set-methods)
+5.the fifth slice would be animate a point the move around the map which just for fun.
 
-## Getting Started
-
-The midterm should be a new repository that you create on your personal github
-account. Create a new repository on GitHub.com and then clone it to your local
-machine using GitHub Desktop.
-
-## Prototype
-
-To see a visual representation of how the story map should work, take a look 
-at this [clickable prototype](https://marvelapp.com/bf2c9h) that uses 
-[Marvel](http://marvelapp.com). Please note that this prototype is only meant 
-to represent the functionality of the story map. Feel free to use your own
-layout, color, and other styles, as long as the functionality is the same.
-Your story map will use a different dataset.
-
-Alternatively, see [individual screenshots](/images/).
+--------.add up: let user to change the color of the point
+--------.add up: let user to change the color of the point
+--------. show the failure base on neighborhood
+--------.uxe plugin to draw/make cluster/minimap/------------https://www.mapbox.com/blog/leaflet-plugins-with-mapbox-js/
+--------.next step: navigation api/---show the nearest 10 point when moving mouse

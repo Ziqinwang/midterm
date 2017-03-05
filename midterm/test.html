@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  </head>
+
+  <body>
+    <!-- Start HTML -->
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="title", id='A'>Chicago Food Inspection
+        <p>The Department of Public Health in Chicago is responsible for promoting public health in the areas of food safety and sanitation to prevent the spread of foodborne disease.Centers for Disease Control and Prevention estimated that there are around 3000 people die from foodborne diseases each year in the United States. </p>
+      </div>
+      <div class="title", id='B'>Chicago Food Inspection
+        <p>City of Chicago’s Department of Public Health completes more than 20,000 inspections on more than 16,000 food establishments every year. </p>
+      </div>
+      <div class="title", id='C'>Chicago Food Inspection
+        <p>Based on food inspection data from the City of Chicago’s Open Data Portal, we collect 1001 restaurants opened in 2015. </p>
+      </div>
+      <div class="title", id='D'>Chicago Food Inspection
+        <p>More than half of the restaurants failed the inspection in 2015, you can click the point to see the detail. </p>
+      </div>
+      <div class="title", id='E'>Chicago Food Inspection
+        <p>You can swipe the map to see the result in different layers. </p>
+      </div>
+    </div>
+
+    <div class='button'>
+      <button id="button-reset">RESET</button>
+      <button id="button-prev">PREVIOUS</button>
+      <button id="button-next">NEXT</button>
+    </div>
+
+    <div id="map" class="map">  </div>
+    <input id='range' class='range' type='range' min='0' max='1.0' step='any' />
+    <!-- Start Javascript Imports -->
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/test.js"></script>
+    <script src="js/SlideModel.js"></script>
+    <!-- End HTML -->
+  </body>
+</html>
