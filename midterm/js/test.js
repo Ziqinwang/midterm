@@ -57,6 +57,8 @@ function clip() {
   }
 
 
+
+
 $(document).ready(function() {
   $.ajax(philly).done(function(data){
     var parsedData = JSON.parse(data);

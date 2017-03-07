@@ -162,6 +162,7 @@ $('#button-reset').click(function(){
     count = 0;
     $("#A").show();
     $(".title").not("#A").hide();
+    $('#button-next').show();
     $("#button-prev").hide();
     showMap();
 });
