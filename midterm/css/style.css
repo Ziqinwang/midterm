@@ -12,10 +12,11 @@ p{
 
 .map {
     position: absolute;
-    right: 0px;
-    left: 25%;
     height: 100%;
+    right: 0;
+    width: 77%;
     top: 0;
+    bottom: 0;
 }
 
 .range {
@@ -51,29 +52,29 @@ p{
 #button-next {
   position: absolute;
   margin-top: -20px;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(187, 139, 36, 0.72);
   font-weight: normal;
   font-size: 15px;
   transition: 0.6s ease;
   z-index: 2000;
   background-color: #222;
   top: 85px;
-  left: 86%;
-  border: none
+  right:10%;
+  border: none;
 }
 
 #button-prev {
   position: absolute;
       margin-top: -20px;
-      color: rgba(216, 216, 216, 0.91);
+      color: rgba(187, 139, 36, 0.72);
       font-weight: normal;
       font-size: 15px;
       transition: 0.6s ease;
       z-index: 2000;
-      background-color: rgba(26, 26, 26, 0.72);
+      background-color: #222;
       top: 85px;
       border: none;
-      right: 197px;
+      right: 17%;
 }
 
 #button-reset {
@@ -84,10 +85,10 @@ p{
       font-size: 15px;
       transition: 0.6s ease;
       z-index: 2000;
-      background-color: rgba(26, 26, 26, 0.72);
+      background-color: rgba(187, 139, 36, 0.72);
       top: 85px;
       border: none;
-      right: 28px
+      right: 3%;
 }
 
 

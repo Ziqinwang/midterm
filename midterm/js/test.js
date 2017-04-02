@@ -22,6 +22,12 @@ var nMap=function(){
 
 //first slide map
 var philly = "https://gist.githubusercontent.com/Ziqinwang/175b3c0fbca09e304edece2e0c757d44/raw/5c7671b92d0af864c06228e888d46c2d1284e755/mid.json";
+var phillydata ;
+$.ajax(philly).done(function(data){
+  var parsedData = JSON.parse(data);
+  phillydata = parsedData;
+});
+
 //dot style
 var geojsonMarkerOptions = {
     radius: 5,
@@ -40,23 +46,11 @@ var pointStyle = function(a){
   };
 
 
-function clipon(){
-  clip();
-  range['oninput' in range ? 'oninput' : 'onchange'] = clip;
-  mymap.on('move', clip);
+function change(){
+  var myLayer1 = titleLayer;
+  var myLayer2 = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png').addTo(mymap);
+  L.control.sideBySide(myLayer1, myLayer2).addTo(mymap);
 }
-
-
-function clip() {
-  overlay = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png').addTo(mymap);
-  var range = document.getElementById('range');
-    var nw = mymap.containerPointToLayerPoint([0, 0]),
-        se = mymap.containerPointToLayerPoint(mymap.getSize()),
-        clipX = nw.x + (se.x - nw.x) * range.value;
-    overlay.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
-  }
-
-
 
 
 $(document).ready(function() {

@@ -70,72 +70,55 @@ var prevNum = function(){
 var showMap = function(){
   resetMap();
   if(count === 0){
-    $.ajax(philly).done(function(data){
-      var parsedData = JSON.parse(data);
-      //console.log(parsedData);
-      L.geoJSON(parsedData,{
+      L.geoJSON(phillydata,{
             pointToLayer: function (feature, latlng) {
               return L.circleMarker(latlng, geojsonMarkerOptions);
             }
         }
       ).addTo(mymap);
-     });
   } else if(count === 1){
     mymap.flyTo([41.875994, -87.618916], 11,{'duration':1.5 });
-    $.ajax(philly).done(function(data){
-      var parsedData = JSON.parse(data);
-      L.geoJSON(parsedData,{
+      L.geoJSON(phillydata,{
             pointToLayer: function (feature, latlng) {
               return L.circleMarker(latlng, geojsonMarkerOptions);
             }
         });
       L.markerClusterGroup().addLayer(
-        L.geoJSON(parsedData,{
+        L.geoJSON(phillydata,{
               pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, geojsonMarkerOptions);
               }
           })
       ).addTo(mymap);
-     });
   } else if (count === 2){
     mymap.flyTo([41.889376, -87.630527], 16, {'duration':1.5 }
     );
-    $.ajax(philly).done(function(data){
-      var parsedData = JSON.parse(data);
-      L.geoJSON(parsedData,{
+      L.geoJSON(phillydata,{
             pointToLayer: function (feature, latlng) {
               return L.circleMarker(latlng, geojsonMarkerOptions)
                       .bindPopup(feature.properties.DBA_Name + '<br/>' + feature.properties.Results);
             }
         }
       ).addTo(mymap);
-     });
     } else if (count == 3){
       mymap.flyTo([41.879396, -87.640995], 16, {'duration':1.5 });
-      $.ajax(philly).done(function(data){
-        //console.log(data);
-          var parsedData = JSON.parse(data);
-          L.geoJSON(parsedData,{
+          L.geoJSON(phillydata,{
                 pointToLayer: function (feature, latlng) {
                   //console.log(feature);
                   return L.circleMarker(latlng, pointStyle(feature))
                           .bindPopup(feature.properties.DBA_Name + '<br/>' + feature.properties.Results);
                 }
           }).addTo(mymap);
-      });
     } else if (count === 4){
       mymap.setView([41.889376, -87.630527], 11);
-      $.ajax(philly).done(function(data){
-          $("#range").show();
-          var parsedData = JSON.parse(data);
-          L.geoJSON(parsedData,{
+      $("#range").show();
+          L.geoJSON(phillydata,{
                 pointToLayer: function (feature, latlng) {
                   return L.circleMarker(latlng, pointStyle(feature))
                           .bindPopup(feature.properties.DBA_Name + '<br/>' + feature.properties.Results);
                 }
           }).addTo(mymap);
-      });
-      clipon();
+      change();
     }
 };
 
@@ -150,12 +133,13 @@ $('#button-next').click(function(){
 $('#button-prev').click(function(){
     prevNum();
     showMap();
-    nMap();
+    // nMap();
     $('#range').hide();
     $('#button-next').show();
     if (count === 0 ){
       $('#button-prev').hide();
     }
+
 });
 
 $('#button-reset').click(function(){
